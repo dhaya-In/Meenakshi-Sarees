@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  body {
+    @apply font-body bg-cream text-charcoal antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-rose {
+    @apply bg-rose text-white px-6 py-3 rounded-lg font-body font-medium text-sm
+           hover:bg-rose-light active:scale-95 transition-all duration-200
+           shadow-rose hover:shadow-lg;
+  }
+  .btn-gold {
+    @apply bg-gold text-white px-6 py-3 rounded-lg font-body font-medium text-sm
+           hover:bg-gold-light active:scale-95 transition-all duration-200;
+  }
+  .btn-outline {
+    @apply border-2 border-rose text-rose px-6 py-3 rounded-lg font-body font-medium text-sm
+           hover:bg-rose hover:text-white active:scale-95 transition-all duration-200;
+  }
+  .btn-ghost {
+    @apply text-charcoal-muted px-4 py-2 rounded-lg font-body font-medium text-sm
+           hover:bg-cream-dark hover:text-charcoal transition-all duration-200;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 bg-cream border border-charcoal/10 rounded-lg
+           font-body text-sm text-charcoal placeholder:text-charcoal-muted/60
+           focus:outline-none focus:border-rose focus:bg-white transition-all duration-200;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-luxury border border-gold/10;
+  }
+  .section-tag {
+    @apply text-xs font-medium tracking-[0.1em] uppercase text-gold mb-2;
+  }
+  .section-title {
+    @apply font-display text-4xl md:text-5xl font-bold text-charcoal leading-tight;
+  }
+  .badge {
+    @apply text-[10px] font-semibold px-2.5 py-1 rounded-full uppercase tracking-wide;
+  }
+  .skeleton {
+    @apply bg-gradient-to-r from-cream-dark via-cream-deeper to-cream-dark
+           bg-[length:200%_100%] animate-shimmer rounded-lg;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-rose to-gold bg-clip-text text-transparent;
+  }
+  .bg-luxury {
+    @apply bg-gradient-to-br from-cream via-cream-dark to-cream-deeper;
+  }
+  .border-gold-subtle {
+    @apply border border-gold/20;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
